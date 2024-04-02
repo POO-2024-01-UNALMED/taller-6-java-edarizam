@@ -19,7 +19,7 @@ public class Pais {
 		Pais.paises.add(this);
 	}
 	
-	public static Pais PaisMasVendedor() {
+	public static Pais paisMasVendedor() {
 			
 			ArrayList<Integer> totalFabricados = new ArrayList<Integer>();
 			
