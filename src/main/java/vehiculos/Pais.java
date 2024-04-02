@@ -29,17 +29,18 @@ public class Pais {
 				
 				for (Fabricante fabrica : Fabricante.getFabricantes()) {
 					
+					int totalAutosAux = 0;
+					
 					if (fabrica.getPais().equals(pais)) {
-						
 						for (Automovil autos : Automovil.getAutomoviles()) {	
 							if (autos.getFabricante().equals(fabrica)) {
-								totalAutos++;
+								totalAutosAux++;
 							}
 						}
 						
 						for (Camion camion : Camion.getCamiones()) {	
 							if (camion.getFabricante().equals(fabrica)) {
-								totalAutos++;
+								totalAutosAux++;
 							}
 						}
 						
@@ -49,19 +50,16 @@ public class Pais {
 							}
 						}
 						
+						totalAutos += totalAutosAux;
 					}
-					
-					
-					
-					totalFabricados.add(totalAutos);
 				}
+				totalFabricados.add(totalAutos);
 			}
-			
-			
+		
 			int fabricado1 = totalFabricados.get(0);
 			
 			for (int fabricados : totalFabricados) {
-				if (fabricado1 > fabricados) {
+				if (fabricados > fabricado1) {
 					fabricado1 = fabricados;
 				}
 			}
@@ -70,11 +68,6 @@ public class Pais {
 			
 			Pais MayoresVentas = paises.get(indice);
 			
-			return MayoresVentas;
-			
-		
-			
+			return MayoresVentas;	
 		}
-	
-	
 }

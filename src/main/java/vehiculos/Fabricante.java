@@ -59,11 +59,11 @@ public class Fabricante {
 			
 			totalFabricados.add(totalAutos);
 		}
-		
+
 		int fabricado1 = totalFabricados.get(0);
 		
 		for (int fabricados : totalFabricados) {
-			if (fabricado1 > fabricados) {
+			if (fabricados > fabricado1) {
 				fabricado1 = fabricados;
 			}
 		}
